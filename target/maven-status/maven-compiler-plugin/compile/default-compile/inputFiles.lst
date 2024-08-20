@@ -3,6 +3,7 @@ d:\mca\mcaBackend\src\main\java\com\mca\McaApplication.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\Stock.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\Promotion.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\KafkaMessageProducer.java
+d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\VideoGameSerie.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\VideoGameEvent.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\VideoGame.java
 d:\mca\mcaBackend\src\main\java\com\mca\config\KafkaConfig.java

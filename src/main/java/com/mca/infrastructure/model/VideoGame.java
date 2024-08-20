@@ -1,14 +1,10 @@
 package com.mca.infrastructure.model;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class VideoGame {
@@ -20,14 +16,6 @@ public class VideoGame {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @OneToMany(mappedBy = "videoGame", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Promotion> promotions;
-
-    @OneToMany(mappedBy = "videoGame", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Stock> stockList;
-
-    // Getters y Setters
-    // Constructors
     public VideoGame() {
     }
 
@@ -51,19 +39,4 @@ public class VideoGame {
         this.title = title;
     }
 
-    public List<Promotion> getPromotions() {
-        return promotions;
-    }
-
-    public void setPromotions(List<Promotion> promotions) {
-        this.promotions = promotions;
-    }
-
-    public List<Stock> getStockList() {
-        return stockList;
-    }
-
-    public void setStockList(List<Stock> stockList) {
-        this.stockList = stockList;
-    }
 }

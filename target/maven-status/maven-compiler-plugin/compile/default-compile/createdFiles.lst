@@ -1,5 +1,6 @@
 com\mca\McaApplication.class
 com\mca\infrastructure\model\VideoGameEvent$VideoGameEventBuilder.class
+com\mca\infrastructure\model\VideoGameSerie.class
 com\mca\infrastructure\model\Stock.class
 com\mca\config\KafkaConfig.class
 com\mca\infrastructure\model\Promotion.class
