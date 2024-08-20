@@ -4,13 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.kafka.annotation.EnableKafka;
 
-@SuppressWarnings("unused")
 @SpringBootApplication
+@EnableKafka  // Habilita el soporte para Kafka si estás utilizando Kafka en tu aplicación
 public class McaApplication {
 
-	public static void main(String[] args) {
-		System.out.println("Hola, mundo!");
-		SpringApplication.run(McaApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(McaApplication.class, args);
+        System.out.println("Hola, mundo!");
+    }
 }

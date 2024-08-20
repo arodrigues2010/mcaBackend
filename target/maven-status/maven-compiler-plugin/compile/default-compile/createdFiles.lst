@@ -4,8 +4,9 @@ com\mca\infrastructure\model\VideoGameSerie.class
 com\mca\infrastructure\model\Stock.class
 com\mca\config\KafkaConfig.class
 com\mca\infrastructure\model\Promotion.class
+com\mca\repository\VideoGameSerieRepository.class
 com\mca\infrastructure\model\VideoGame.class
 com\mca\infrastructure\model\VideoGameEvent.class
 com\mca\infrastructure\KafkaMessageProducer.class
+com\mca\repository\VideoGameRepository.class
 com\mca\controller\SagaController.class
-com\mca\repository\VideogamesRepository.class
