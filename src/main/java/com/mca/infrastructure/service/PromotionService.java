@@ -16,4 +16,9 @@ public class PromotionService {
     public List<Object[]> getVideoGameIdAndPromotion(Integer videoGameId) {
         return promotionRepository.findVideoGameIdAndPromotionByVideoGameId(videoGameId);
     }
+
+    // Método para eliminar promociones por videoGameId
+    public void deletePromotionsByVideoGameId(Long videoGameId) {
+        promotionRepository.deleteById(videoGameId);
+    }
 }
