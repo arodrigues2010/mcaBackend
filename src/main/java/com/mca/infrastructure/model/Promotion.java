@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Promotion {
 
@@ -28,6 +30,8 @@ public class Promotion {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "video_game_id", nullable = false)
+
+    @JsonIgnore // Ignorar la serialización del campo videoGame
     private VideoGame videoGame;
 
     // Getters y Setters

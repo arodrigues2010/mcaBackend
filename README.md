@@ -23,3 +23,5 @@ You should use the following command on the [root folder](./docker-compose.yml):
 - If the application is dockerized, do it in another Docker file inside an 'integration' folder.
 
 ## The game begins! 🎮
+
+docker run --hostname=f473cae43cf0 --mac-address=02:42:ac:11:00:02 --env=PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=JAVA_HOME=/usr/local/openjdk-11 --env=LANG=C.UTF-8 --env=JAVA_VERSION=11.0.16 --workdir=/usr/src/app --restart=no --runtime=runc -p 8080:8080 -d mca:latest
