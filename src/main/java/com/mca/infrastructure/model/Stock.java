@@ -17,7 +17,7 @@ public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     private Boolean availability;
 
@@ -41,11 +41,11 @@ public class Stock {
         this.lastUpdated = LocalDateTime.now();
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

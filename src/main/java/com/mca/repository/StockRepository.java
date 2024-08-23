@@ -8,5 +8,5 @@ import com.mca.infrastructure.model.Stock;
 import java.util.List;
 
 public interface StockRepository extends JpaRepository<Stock, Long> {
-     List<Object[]> findVideoGameIdAndStockByVideoGameId(@Param("videoGameId") Integer videoGameId);
+     List<Object[]> findVideoGameIdAndStockByVideoGameId(@Param("videoGameId") Long videoGameId);
 }

@@ -32,7 +32,7 @@ public class KafkaConfig implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		try {
-			System.out.println("Hola, mundo!");
+
 			List<VideoGameEvent> stocks = Files
 					.readAllLines(ResourceUtils.getFile(resourceFile.getURL()).toPath()).stream()
 					.map(line -> convertStock(Arrays.asList(line.trim().split(",")))).collect(Collectors.toList());

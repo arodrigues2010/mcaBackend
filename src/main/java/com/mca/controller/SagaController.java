@@ -49,7 +49,7 @@ public class SagaController {
     }
 
     @GetMapping("/{videoGameId}/stock")
-    public ResponseEntity<List<Object[]>> getStockByVideoGameId(@PathVariable Integer videoGameId) {
+    public ResponseEntity<List<Object[]>> getStockByVideoGameId(@PathVariable Long videoGameId) {
         List<Object[]> stockList = stockService.getVideoGameIdAndStock(videoGameId);
 
         if (stockList == null || stockList.isEmpty()) {
@@ -60,7 +60,7 @@ public class SagaController {
     }
 
     @GetMapping("/{videoGameId}/promotion")
-    public ResponseEntity<List<Object[]>> getPromotionByVideoGameId(@PathVariable Integer videoGameId) {
+    public ResponseEntity<List<Object[]>> getPromotionByVideoGameId(@PathVariable Long videoGameId) {
         List<Object[]> promotionList = promotionService.getVideoGameIdAndPromotion(videoGameId);
 
         if (promotionList == null || promotionList.isEmpty()) {

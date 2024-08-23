@@ -13,7 +13,7 @@ public class StockService {
     @Autowired
     private StockRepository stockRepository;
 
-    public List<Object[]> getVideoGameIdAndStock(Integer videoGameId) {
+    public List<Object[]> getVideoGameIdAndStock(Long videoGameId) {
         return stockRepository.findVideoGameIdAndStockByVideoGameId(videoGameId);
     }
 }

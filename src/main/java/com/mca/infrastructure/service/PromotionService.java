@@ -13,7 +13,7 @@ public class PromotionService {
     @Autowired
     private PromotionRepository promotionRepository;
 
-    public List<Object[]> getVideoGameIdAndPromotion(Integer videoGameId) {
+    public List<Object[]> getVideoGameIdAndPromotion(Long videoGameId) {
         return promotionRepository.findVideoGameIdAndPromotionByVideoGameId(videoGameId);
     }
 
