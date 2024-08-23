@@ -8,6 +8,7 @@ import lombok.Data;
 @Builder
 @Data
 public class VideoGameEvent {
+	
 	private Long stock_id;
 
 	private boolean availability;

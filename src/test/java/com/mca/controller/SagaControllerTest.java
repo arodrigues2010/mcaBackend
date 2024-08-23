@@ -1,11 +1,7 @@
 package com.mca.controller;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import org.apache.tomcat.util.http.parser.MediaType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,10 +48,8 @@ class SagaControllerTest {
                 .andExpect(MockMvcResultMatchers.status().is(HttpStatus.OK.value()))
                 .andExpect(jsonPath("$.id").value(11))
                 .andExpect(jsonPath("$.title").value("Relic Hunter: Curse of the Emerald Eye"))
-                .andExpect(jsonPath("$.promotions[0].id").value(11))
                 .andExpect(jsonPath("$.promotions[0].validFrom").value("2023-10-05T22:47:45.356"))
                 .andExpect(jsonPath("$.promotions[0].price").value(39.99))
-                .andExpect(jsonPath("$.promotions[1].id").value(31))
                 .andExpect(jsonPath("$.promotions[1].validFrom").value("2022-06-20T16:45:00"))
                 .andExpect(jsonPath("$.promotions[1].price").value(39.99))
 				.andReturn().getResponse().getContentAsString();

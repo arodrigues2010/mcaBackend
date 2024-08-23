@@ -7,7 +7,6 @@ d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\service\VideoGameService.
 d:\mca\mcaBackend\src\main\java\com\mca\repository\VideoGameRepository.java
 d:\mca\mcaBackend\src\main\java\com\mca\controller\SagaController.java
 d:\mca\mcaBackend\src\main\java\com\mca\McaApplication.java
-d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\KafkaMessageConsumer.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\KafkaMessageProducer.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\service\StockService.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\VideoGameEvent.java

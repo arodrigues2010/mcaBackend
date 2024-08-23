@@ -8,19 +8,14 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mca.infrastructure.model.VideoGame;
-import com.mca.infrastructure.model.VideoGameSerie;
 import com.mca.infrastructure.service.PromotionService;
 import com.mca.infrastructure.service.StockService;
 import com.mca.infrastructure.service.VideoGameService;
-import com.mca.repository.VideoGameSerieRepository;
 import com.mca.repository.VideoGameRepository;
 
 @RestController
 @RequestMapping("/game")
 public class SagaController {
-
-    @Autowired
-    private VideoGameSerieRepository repository;
 
     @Autowired
     private VideoGameRepository repositoryGame;
@@ -33,12 +28,6 @@ public class SagaController {
 
     @Autowired
     private VideoGameService videoGameService;
-
-    // Endpoint para obtener una serie de videojuegos por nombre de serie
-    @GetMapping("/serie/{serie}")
-    public List<VideoGameSerie> getBySerie(@PathVariable String serie) {
-        return repository.findBySerie(serie);
-    }
 
     // Endpoint para obtener un videojuego por su ID
     @GetMapping("/{id}/saga")
@@ -80,7 +69,6 @@ public class SagaController {
         }
     }
 
-    // Obtener todos los VideoGames
     @GetMapping("/all")
     public ResponseEntity<List<VideoGame>> getAllVideoGames() {
         try {
@@ -91,7 +79,6 @@ public class SagaController {
         }
     }
 
-    // Eliminar un VideoGame por su ID
     @DeleteMapping("{id}/promotion")
     public ResponseEntity<Void> deleteVideoGame(@PathVariable Long id) {
         try {
