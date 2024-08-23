@@ -12,6 +12,8 @@ import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.util.Collections;
 import java.util.Map;
@@ -20,14 +22,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
+@WebAppConfiguration
 @DirtiesContext
 @EmbeddedKafka(partitions = 1, topics = { "MCA" })
 class KafkaMessageConsumerTest {
 
     @Autowired
+	private WebApplicationContext webApplicationContext;
     private org.springframework.kafka.test.EmbeddedKafkaBroker embeddedKafkaBroker;
-
-    @Autowired
     private KafkaMessageConsumer consumer;
 
     @Test

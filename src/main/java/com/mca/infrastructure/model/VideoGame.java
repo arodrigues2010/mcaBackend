@@ -1,10 +1,7 @@
 package com.mca.infrastructure.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class VideoGame {
@@ -16,11 +13,15 @@ public class VideoGame {
     @Column(nullable = false, length = 100)
     private String title;
 
+    @OneToMany(mappedBy = "videoGame", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<Promotion> promotions;
+
     public VideoGame() {
     }
 
-    public VideoGame(String title) {
+    public VideoGame(String title, Set<Promotion> promotions) {
         this.title = title;
+        this.promotions = promotions;
     }
 
     public Long getId() {
@@ -39,4 +40,11 @@ public class VideoGame {
         this.title = title;
     }
 
+    public Set<Promotion> getPromotions() {
+        return promotions;
+    }
+
+    public void setPromotions(Set<Promotion> promotions) {
+        this.promotions = promotions;
+    }
 }

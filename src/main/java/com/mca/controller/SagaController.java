@@ -16,7 +16,7 @@ import com.mca.repository.VideoGameSerieRepository;
 import com.mca.repository.VideoGameRepository;
 
 @RestController
-@RequestMapping("/api/videogames")
+@RequestMapping("/game")
 public class SagaController {
 
     @Autowired
@@ -41,14 +41,14 @@ public class SagaController {
     }
 
     // Endpoint para obtener un videojuego por su ID
-    @GetMapping("/game/{id}")
+    @GetMapping("/{id}/saga")
     public ResponseEntity<VideoGame> getById(@PathVariable Long id) {
         Optional<VideoGame> videoGame = videoGameService.findById(id);
         return videoGame.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/game/{videoGameId}/stock")
+    @GetMapping("/{videoGameId}/stock")
     public ResponseEntity<List<Object[]>> getStockByVideoGameId(@PathVariable Integer videoGameId) {
         List<Object[]> stockList = stockService.getVideoGameIdAndStock(videoGameId);
 
@@ -59,7 +59,7 @@ public class SagaController {
         return ResponseEntity.ok(stockList);
     }
 
-    @GetMapping("/game/{videoGameId}/promotion")
+    @GetMapping("/{videoGameId}/promotion")
     public ResponseEntity<List<Object[]>> getPromotionByVideoGameId(@PathVariable Integer videoGameId) {
         List<Object[]> promotionList = promotionService.getVideoGameIdAndPromotion(videoGameId);
 
@@ -70,7 +70,7 @@ public class SagaController {
         return ResponseEntity.ok(promotionList);
     }
 
-    @PostMapping("/game")
+    @PostMapping("/create")
     public ResponseEntity<VideoGame> createVideoGame(@RequestBody VideoGame videoGame) {
         try {
             VideoGame savedVideoGame = repositoryGame.save(videoGame);
@@ -81,7 +81,7 @@ public class SagaController {
     }
 
     // Obtener todos los VideoGames
-    @GetMapping("/game/all")
+    @GetMapping("/all")
     public ResponseEntity<List<VideoGame>> getAllVideoGames() {
         try {
             List<VideoGame> videoGames = videoGameService.getAllVideoGames();
@@ -92,7 +92,7 @@ public class SagaController {
     }
 
     // Eliminar un VideoGame por su ID
-    @DeleteMapping("game/{id}/promotion")
+    @DeleteMapping("{id}/promotion")
     public ResponseEntity<Void> deleteVideoGame(@PathVariable Long id) {
         try {
             if (videoGameService.findById(id).isPresent()) {
