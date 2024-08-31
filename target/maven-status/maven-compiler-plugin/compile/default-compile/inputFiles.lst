@@ -1,12 +1,11 @@
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\Stock.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\Promotion.java
-d:\mca\mcaBackend\src\main\java\com\mca\repository\VideoGameSerieRepository.java
-d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\VideoGameSerie.java
 d:\mca\mcaBackend\src\main\java\com\mca\config\KafkaConfig.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\service\VideoGameService.java
 d:\mca\mcaBackend\src\main\java\com\mca\repository\VideoGameRepository.java
 d:\mca\mcaBackend\src\main\java\com\mca\controller\SagaController.java
 d:\mca\mcaBackend\src\main\java\com\mca\McaApplication.java
+d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\service\KafkaConsumerService.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\KafkaMessageProducer.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\service\StockService.java
 d:\mca\mcaBackend\src\main\java\com\mca\infrastructure\model\VideoGameEvent.java
